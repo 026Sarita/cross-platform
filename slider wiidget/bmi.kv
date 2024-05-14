@@ -1,0 +1,55 @@
+<UI>:
+    id:scr_manager
+    Scr_knoeledge:
+    Scr_bmi:
+
+<Scr_bmi>: #หน้า2
+    name: "scr_bmi"
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            id: txt_weight
+            hint_text: "input weigth"
+            readonly: True
+        Slider:
+            id: slider_weight
+            min:30
+            max:100
+            step: 0.5
+            set: 40        
+            on_value: txt_weight.text = str(slider_weight.value)
+        TextInput:
+            id: txt_height
+            hint_text: "input heigth"
+            readonly: True
+        Slider:
+            id: slider_height
+            min:140
+            max:200
+            step:0.1
+            set:100       
+            on_value: txt_height.text = str(slider_height.value)
+        Button:
+            id:btn_bmi
+            on_press: root.cal_bmi() #ผูกฟังชั่น cal_bmi ไม่ส่งค่าใดๆ
+        Label:
+            id: lbl_bmi
+            text: 'bmi = '
+        Image:
+            id: img_bmi
+
+            
+
+<Scr_knoeledge>: #หน้า1
+    name: "scr_1"
+    BoxLayout: 
+        orientation: 'vertical'
+        Image:
+            source: "bmi.jpg"
+        Button:
+            text: 'คำนวน'
+            background_color:"red"
+            size_hint: 0.25 , 0.10
+            font_name:"tahoma"
+            on_press: app.root.current = "scr_bmi"
+
