@@ -1,0 +1,73 @@
+<UI>:
+    id:scr_manager
+    LoginScreen:
+    MainScreen:
+        
+#----------2---------------
+<MainScreen>:
+    name: "Main_scr"
+    BoxLayout:
+        orientation: 'vertical'
+        Image:
+            source: "Logo.png"
+            pos_hint: {'x': 0.10,'y': 0.20}
+        Label:
+            text: 'ลงทะเบียนเข้ารับการอบรม'
+            font_name: 'tahoma'
+
+        TextInput:
+            multiline: False
+            size_hint: 1, 0.35
+          
+        TextInput:
+            multiline: False
+            size_hint: 1, 0.35
+           
+        TextInput:
+            multiline: False
+            size_hint: 1, 0.35
+            
+        TextInput:
+            multiline: False
+            size_hint: 1, 0.35
+            
+        
+        Button:
+            text: 'ดำเนินการต่อ'
+            font_name: 'tahoma'
+            size_hint: 0.50 , 0.10
+            pos_hint: {'x': 0.10,'y': 0.7}
+            background_color: "#6600FF"
+    
+
+#----------1---------------
+<LoginScreen>:
+    name: "Login_scr"
+    BoxLayout: 
+        orientation: 'vertical'
+    Image:
+        source: "Logo.png"
+        pos_hint: {'x': 0.10,'y': 0.20}
+    Button:
+        text: 'เข้าสู่ระบบ'
+        font_name: 'tahoma'
+        size_hint: 0.50 , 0.10
+        pos_hint: {'x': 0.30,'y': 0.40}
+        background_color: "#FFFF00"
+        on_press: app.root.current = "Main_scr"
+    Button:
+        text: 'ลงทะเบียนใหม่'
+        font_name: 'tahoma'
+        size_hint: 0.50 , 0.10
+        pos_hint: {'x': 0.30,'y': 0.30}
+        background_color: "#9900FF"
+    Button:
+        text: 'For Foreigner'
+        font_name: 'tahoma'
+        size_hint: 0.50 , 0.10
+        pos_hint: {'x': 0.30,'y': 0.20}
+        background_color: "#3366FF"
+    Image:
+        source: "Line.png"
+        size_hint: 0.10, 0.5
+        pos_hint: {'x': 0.10,'y': 0.10}
